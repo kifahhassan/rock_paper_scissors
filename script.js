@@ -15,3 +15,6 @@ switch (number) {
 }
 
 }
+
+var playerSelection = prompt("Let's play rock, paper, scissors.")
+const computerSelection = getComputerChoice();
