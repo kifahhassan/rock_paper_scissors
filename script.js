@@ -17,6 +17,7 @@ switch (number) {
 }
 
 function playRound(playerSelection, computerSelection) {
+
     if (playerSelection === computerSelection) {
         return "it's a tie!";
     } else if (playerSelection === "rock" && computerSelection === "paper") {
@@ -34,5 +35,5 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-var playerSelection = prompt("Let's play rock, paper, scissors.")
-const computerSelection = getComputerChoice();
+var playerSelection = prompt("Let's play rock, paper, scissors.").toLowerCase();
+const computerSelection = getComputerChoice().toLowerCase();
