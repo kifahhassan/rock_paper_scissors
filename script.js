@@ -16,5 +16,17 @@ switch (number) {
 
 }
 
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection === computerSelection) {
+        return "it's a tie!";
+    } else if (playerSelection === "rock" && computerSelection === "paper") {
+        return "You win! Rock beats paper";
+    } else if (playerSelection == "paper" && computerSelection === "rock") {
+        return "You lose! Rock beats paper!"
+    } else if (playerSelection == "scissors" && computerSelection =="rock") {
+        return "You lose! Rock beats scissors";
+    }
+}
+
 var playerSelection = prompt("Let's play rock, paper, scissors.")
 const computerSelection = getComputerChoice();
