@@ -1,19 +1,18 @@
-console.log("Hello, this is a test for JavaScript");
-
 function getComputerChoice(){
-    let number = Math.floor(Math.random() * 3) + 1;
+    let number = Math.floor(Math.random() * 3);
 
 switch (number) {
-    case 1:
+    case 0:
         return "ROCK";
-    case 2:
+    case 1:
         return "PAPER";
-    case 3:
+    case 2:
         return "SCISSORS";
     default:
         return "The system produced an error. Please try again"; //This handles unexpected values
 }
 }
+
 playerScore = 0;
 computerScore = 0;
 roundWinner = "";
