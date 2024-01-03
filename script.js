@@ -15,7 +15,6 @@ switch (number) {
 
 let playerScore = 0;
 let computerScore = 0;
-let roundWinner = "";
 
 
 function playRound(playerSelection, computerSelection) {
@@ -25,7 +24,6 @@ function playRound(playerSelection, computerSelection) {
         playerSelection === "SCISSORS" && computerSelection === "PAPER"
         ) {
             playerScore++;
-            roundWinner = "player";
         }
     if (
         computerSelection === "PAPER" && playerSelection === "ROCK" ||
@@ -33,7 +31,6 @@ function playRound(playerSelection, computerSelection) {
         computerSelection === "SCISSORS" && playerSelection === "PAPER"
     ) {
         computerScore++;
-        roundWinner = "computer";
     }
 }
 
@@ -41,14 +38,20 @@ function playRound(playerSelection, computerSelection) {
 function game() {
 
     for (let i = 0; i < 5; i++) {
+
         var playerSelection = prompt("Let's play rock, paper, scissors.").toUpperCase();
         var computerSelection = getComputerChoice().toUpperCase();
+
         playRound(playerSelection, computerSelection);
-        console.log("computer threw: " + computerSelection);
+
+        
         console.log("player threw: " + playerSelection);
+        console.log("computer threw: " + computerSelection); 
+
         console.log("player score: " + playerScore);
         console.log("computer score: " + computerScore);
     }
+
 
     if (playerScore > computerScore) {
         console.log("Player wins!");
