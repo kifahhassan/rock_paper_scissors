@@ -37,12 +37,17 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-const computerSelection = getComputerChoice().toUpperCase();
 
 function game() {
-    for (let i = 0; i < 5; i++) {
-        let playerSelection = prompt("Let's play rock, paper, scissors.").toUpperCase();
-        let result = playRound(playerSelection, computerSelection);
-        console.log(result);
+    for (let i = 0; i < 4; i++) {
+        var playerSelection = prompt("Let's play rock, paper, scissors.").toUpperCase();
+        var computerSelection = getComputerChoice().toUpperCase();
+        playRound(playerSelection, computerSelection);
+        console.log("player score: " + playerScore++);
+        console.log("computer score: " + computerScore++);
+        console.log(computerSelection + " this is computer");
+        console.log(playerSelection + " this is player");
     }
 }
+
+
