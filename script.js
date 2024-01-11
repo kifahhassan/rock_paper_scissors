@@ -59,7 +59,9 @@ function game() {
         console.log("Computer wins!");
     } else if (computerScore === playerScore) {
         console.log("It's a tie!");
+
     }
 }
 
 
+// Test to see if it goes to main or branch on github
