@@ -37,7 +37,7 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
 
-    // for (let i = 0; i < 5; i++) {
+    // for (let i = 0; i < 5; i++) {git 
 
         var playerSelection = prompt("Let's play rock, paper, scissors.").toUpperCase();
         var computerSelection = getComputerChoice().toUpperCase();
