@@ -1,3 +1,4 @@
+
 function getComputerChoice(){
     let number = Math.floor(Math.random() * 3);
 
@@ -15,6 +16,7 @@ switch (number) {
 
 let playerScore = 0;
 let computerScore = 0;
+let computerSelection = '';
 
 
 function playRound(playerSelection, computerSelection) {
@@ -40,7 +42,7 @@ function game() {
     // for (let i = 0; i < 5; i++) {git 
 
         var playerSelection = prompt("Let's play rock, paper, scissors.").toUpperCase();
-        var computerSelection = getComputerChoice().toUpperCase();
+        // var computerSelection = getComputerChoice().toUpperCase();
 
         playRound(playerSelection, computerSelection);
 
@@ -66,10 +68,19 @@ let btns = document.querySelectorAll('.btn');
 
 btns.forEach(function(element) {
     element.addEventListener('click', function() {
+
         playerSelection = element.textContent.slice(0, -1).toUpperCase();
+        computerSelection = getComputerChoice().toUpperCase();
+
         console.log(playerSelection);
+        console.log(computerSelection);
+
+        playRound(playerSelection, computerSelection);
+
+        console.log(playerScore, computerScore);
     });
 });
+
 
 
 // Test to see if it goes to main or branch on github
