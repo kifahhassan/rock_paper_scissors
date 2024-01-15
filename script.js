@@ -39,14 +39,14 @@ function playRound(playerSelection, computerSelection) {
         computerSelection === "ROCK" && playerSelection === "ROCK" ||
         computerSelection === "SCISSORS" && playerSelection === "SCISSORS"
     ) {
-        return alert('TIE');
+        return console.log('TIE');
     }
 }
 
 
 function game() {
 
-    // for (let i = 0; i < 5; i++) {git 
+    // for (let i = 0; i < 5; i++) { 
 
         var playerSelection = prompt("Let's play rock, paper, scissors.").toUpperCase();
 
@@ -77,6 +77,27 @@ let computerPick = document.getElementById('computerPick');
 let scorePlayer = document.getElementById('scorePlayer');
 let scoreComputer = document.getElementById('scoreComputer');
 
+function resetScoreboard() {
+    playerScore = 0;
+    computerScore = 0;
+    scorePlayer.textContent = "Player score: " + playerScore;
+    scoreComputer.textContent = "Computer score: " + computerScore;
+    playerPick.textContent = "";
+    computerPick.textContent = "";
+}
+
+function checkWinnerAndReset() {
+
+    if (playerScore === 5) {
+        alert('Player wins!');
+        resetScoreboard();
+
+    } else if (computerScore === 5) {
+        alert('Computer wins!')
+        resetScoreboard();
+    }
+}
+
 
 btns.forEach(function(element) {
     element.addEventListener('click', function() {
@@ -86,6 +107,9 @@ btns.forEach(function(element) {
 
         console.log(playerSelection);
         console.log(computerSelection);
+
+    
+     
 
         playRound(playerSelection, computerSelection);
 
@@ -97,8 +121,7 @@ btns.forEach(function(element) {
         scorePlayer.textContent = "Player score: " + playerScore;
         scoreComputer.textContent = "Computer score: " + computerScore;
 
-
-
+        checkWinnerAndReset();
 
     });
 });
