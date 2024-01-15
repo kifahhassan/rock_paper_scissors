@@ -62,6 +62,15 @@ function game() {
     }
 };
 
+let btns = document.querySelectorAll('.btn');
+
+btns.forEach(function(element) {
+    element.addEventListener('click', function() {
+        playerSelection = element.textContent.slice(0, -1).toUpperCase();
+        console.log(playerSelection);
+    });
+});
+
 
 // Test to see if it goes to main or branch on github
 //Test from ubuntu account. Please ignore
